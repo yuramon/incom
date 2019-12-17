@@ -17,4 +17,13 @@ class Private::ConversationsController < ApplicationController
       end
     end
   end
+
+  def close
+    @conversation_id = params[:id].to_i
+    session[:private_conversations].delete(@conversation_id)
+
+    respond_to do |format|
+      format.js
+    end
+  end
 end
