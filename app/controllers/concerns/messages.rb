@@ -9,8 +9,8 @@ module Messages
     @conversation = model.find(params[:conversation_id])
     # get previous messages of the conversation
     @messages = @conversation.messages.order(created_at: :desc)
-                    .limit(messages_amount)
-                    .offset(params[:messages_to_display_offset].to_i)
+                                      .limit(messages_amount)
+                                      .offset(params[:messages_to_display_offset].to_i)
     # set a variable to get another previous messages of the conversation
     @messages_to_display_offset = params[:messages_to_display_offset].to_i + messages_amount
 
