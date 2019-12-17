@@ -62,6 +62,7 @@ group :test do
   gem 'headless'
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'gon'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
